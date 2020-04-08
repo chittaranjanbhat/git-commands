@@ -170,8 +170,6 @@ Date:   Tue Apr 7 12:03:41 2020 -0500
 
 ## git push -f origin master
 
- 
-#git update forked repo
 cub 7-4-2020 % git clone https://github.com/chittaranjan/bhat-vldtn-svcs.git
 Cloning into 'bhat-vldtn-svcs'...
 remote: Enumerating objects: 50, done.
@@ -185,6 +183,22 @@ cub bhat-vldtn-svcs % git remote -v
 origin	https://github.com/chittaranjan/bhat-vldtn-svcs.git (fetch)
 origin	https://github.com/chittaranjan/bhat-vldtn-svcs.git (push)
 cub bhat-vldtn-svcs % git remote add upstream https://github.com/bhat/bhat-vldtn-api.git
+cub bhat-vldtn-svcs % git remote -v                                                                              
+origin	https://github.com/chittaranjan/bhat-vldtn-svcs.git (fetch)
+origin	https://github.com/chittaranjan/bhat-vldtn-svcs.git (push)
+upstream	https://github.com/bhat/bhat-vldtn-api.git (fetch)
+upstream	https://github.com/bhat/bhat-vldtn-api.git (push)
+cub bhat-vldtn-svcs % git fetch upstream
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), done.
+From https://github.com/bhat/bhat-vldtn-api
+ * [new branch]      master     -> upstream/master
+cub bhat-vldtn-svcs % git merge upstream/master
+Already up to date!
+Merge made by the 'recursive' strategy.
+
 cub bhat-vldtn-svcs % git remote -v                                                                              
 origin	https://github.com/chittaranjan/bhat-vldtn-svcs.git (fetch)
 origin	https://github.com/chittaranjan/bhat-vldtn-svcs.git (push)
